@@ -20,7 +20,7 @@ body{
     overflow-y: scroll;
 }
 #title_div{
-    border:1px solid red;  
+   /* border:1px solid red;  */
     min-height:0px !important;
     height: 75%;
     font-size: calc(3vw + 3vh);
