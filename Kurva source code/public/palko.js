@@ -68,6 +68,7 @@ function init() {
 
   let width = screen.width;
   let height = screen.height;
+  
 
   //d3 canvases for svg elements
   titleArea = d3.select("#title_div").append("svg")
@@ -129,7 +130,7 @@ Title
 function drawTitle(){
   //Draw headline
   titleArea.append("text")
-         .attrs({dx: 20, dy: "1em", class: "headline"})
+         .attrs({dx: 20, dy: "1em", class: "h4"})
          .text("MolEViTA - Ready Biodegradability");
 
 
@@ -154,6 +155,11 @@ function drawContext(){
 
   let thisCanvasWidth = d3.select("#context_div").node().clientWidth;
   let thisCanvasHeight = d3.select("#context_div").node().clientHeight;
+
+  if (thisCanvasHeight> thisCanvasWidth)
+    thisCanvasHeight=thisCanvasWidth
+    
+  else thisCanvasWidth=thisCanvasHeight;
 
   contextArea.append('rect')
             .attrs({ x: 0, y: 20, width: thisCanvasWidth-60, height: thisCanvasHeight - 30, fill: '#c3c3c3' })
@@ -360,7 +366,8 @@ function ScatterPlot_context(w, h, visibleData){
 
   escala_x_contexto = getXScale_context(w,h);
   escala_y_contexto = getyScale_context(w,h);
-  
+  console.log("escala x contexto " + escala_x_contexto);
+  console.log("escala y contexto " + escala_y_contexto);
   // Dibujo los ejes 
   var xAxis = d3.axisBottom().scale(escala_x_contexto).ticks(5);
     
@@ -747,3 +754,13 @@ function drawRadViz(){
 
 		 });
 }
+
+//We will build a basic function to handle window resizing.
+function resize() {
+    
+    drawPlot();
+    drawContext();
+     
+}
+
+window.onresize = resize;
