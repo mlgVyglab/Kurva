@@ -130,11 +130,12 @@ function drawTitle(){
   //Draw headline
   titleArea.append("text")
          .attrs({dx: 20, dy: "1em", class: "headline"})
-         .text("MolEViTA");
+         .text("MolEViTA - Ready Biodegradability");
 
-  titleArea.append("text")
-         .attrs({dx: 180, dy: "1em", class: "subline"})
-         .text(" - Ready Biodegradability");
+
+ //titleArea.append("text")
+//         .attrs({dx: 180 , dy: "1em", class: "subline"})
+//         .text(" - Ready Biodegradability");
 }
 
 
