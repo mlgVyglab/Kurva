@@ -659,7 +659,7 @@ function cargarImagen(molecula){
   var myimage = moleculeArea.append('image')
     .attr("xlink:href", "images/"+id+".png")
     .attr('width', 130)
-.attr('height', 130)
+    .attr('height', 130)
     .attr('x', 0)
     .attr('y', 0);
 
@@ -667,66 +667,44 @@ function cargarImagen(molecula){
 
 
 function drawMolecule3D(){
-console.log("pepepreprperpeprpep");
-Info = {
-	width: 300,
-	height: 300,
-	debug: false,
-	j2sPath: "j2s",
-	color: "0xC0C0C0",
-    disableJ2SLoadMonitor: true,
-    disableInitialConsole: true,
-	addSelectionOptions: false,
-	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-	use: "HTML5",
-	readyFunction: null,
-	//script: "load 2bxaH.pdb"
-	//script: "load taxol.mol"
-	 script: "load :smiles:CC/C=C/CC"
-}
-Jmol.getApplet("molecule3D_div", Info, true);
-$("#molecule3D_div").html(Jmol.getAppletHtml("jmol", Info));
-//html(Jmol.getAppletHtml("jmolApplet0",Info))
-
-Jmol.jmolButton(jmol,"load ? ","Load FILE")
- 
-
 
 }
 
 var concatenated_smiles="";
 
+
+/*
 function cargarJSMol3D(molecula){
-	 id = molecula.ID;
-	 var selected_smile=molecula.SMILES;
-	 //selected_smile=selected_smile.replace(/\//g,"\\/");
-	 //selected_smile=encodeURI(selected_smile);
-	 concatenated_smiles+="load APPEND smiles \""+selected_smile+"\";";
-	 //var scritp_smile="load :smiles:"+selected_smile;
-	 var scritp_smile=concatenated_smiles+" frame all";
-	 console.log(scritp_smile);
-	 //console.log(selected_smile);
+
+$("#molecule3D_div").html(Jmol.getAppletHtml("jmol", Info));   id = molecula.ID;
+   var selected_smile=molecula.SMILES;
+   //selected_smile=selected_smile.replace(/\//g,"\\/");
+   //selected_smile=encodeURI(selected_smile);
+   concatenated_smiles+="load APPEND smiles \""+selected_smile+"\";";
+   //var scritp_smile="load :smiles:"+selected_smile;
+   var scritp_smile=concatenated_smiles+" frame all";
+   console.log(scritp_smile);
+   //console.log(selected_smile);
 Info = {
-	width: 300,
-	height: 300,
-	debug: false,
-	j2sPath: "j2s",
-	color: "0xC0C0C0",
+  width: 300,
+  height: 300,
+  debug: false,
+  j2sPath: "j2s",
+  color: "0xC0C0C0",
     disableJ2SLoadMonitor: true,
     disableInitialConsole: true,
-	addSelectionOptions: false,
-	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-	use: "HTML5",
-	readyFunction: null,
-	script:scritp_smile
-	
-	//script:scritp_smile
+  addSelectionOptions: false,
+  serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+  use: "HTML5",
+  readyFunction: null,
+  script:scritp_smile
+  
+  //script:scritp_smile
 }
 
 Jmol.getApplet("molecule3D_div", Info, true);
-$("#molecule3D_div").html(Jmol.getAppletHtml("jmol", Info));
 
-}
+}*/
 
 function drawRadViz(){
 	var dimensions = ['sepalLength', 'sepalWidth', 'petalLength', 'petalWidth'];
