@@ -9,11 +9,16 @@
     <script src="https://rawgit.com/biovisualize/radviz/master/radviz-min.js"></script>
     <link href="./public/main.css" rel="stylesheet">
     <script type="text/javascript" src="./public/palko.js"></script>
+    <script type="text/javascript" src="./public/TemplateData/UnityProgress.js"></script>
+    <script type="text/javascript" src="./public/Build/UnityLoader.js"></script>
   </head>
 
 
   <body>
-
+    <div>
+      <input type="text" id="myText" >
+      <button onclick="rotate()">Load sdf</button>
+    </div>
     <div class="container-fluid" id="title_div"></div>
     <div class="container-fluid">
       <div class="row">
