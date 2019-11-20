@@ -31,7 +31,6 @@ var detailsArea;
 var moleculeArea;
 var tagsArea;
 var moleculeArea3D;
-var radVizArea;
 
 var gameInstance;
 
@@ -96,9 +95,6 @@ function init() {
   moleculeArea3D  = d3.select("#molecule3D_div").append("svg")
                                     .attr("width",d3.select("#molecule3D_div").node().clientWidth)
                                     .attr("height",d3.select("#molecule3D_div").node().clientHeight);
-  radVizArea  = d3.select("#radViz_div").append("svg")
-                                    .attr("width",d3.select("#radViz_div").node().clientWidth)
-                                    .attr("height",d3.select("#radViz_div").node().clientHeight);
   tagsArea = d3.select("#tags_div").append("svg")
                                     .attr("width",d3.select("#tags_div").node().clientWidth)
                                     .attr("height",d3.select("#tags_div").node().clientHeight);  
@@ -123,7 +119,6 @@ function visualization() {
   
   drawMolecule3D();
   
- // drawRadViz();
 
 }
 /*----------------------
@@ -682,65 +677,6 @@ function rotate(){
 var concatenated_smiles="";
 
 
-/*
-function cargarJSMol3D(molecula){
-
-$("#molecule3D_div").html(Jmol.getAppletHtml("jmol", Info));   id = molecula.ID;
-   var selected_smile=molecula.SMILES;
-   //selected_smile=selected_smile.replace(/\//g,"\\/");
-   //selected_smile=encodeURI(selected_smile);
-   concatenated_smiles+="load APPEND smiles \""+selected_smile+"\";";
-   //var scritp_smile="load :smiles:"+selected_smile;
-   var scritp_smile=concatenated_smiles+" frame all";
-   console.log(scritp_smile);
-   //console.log(selected_smile);
-Info = {
-  width: 300,
-  height: 300,
-  debug: false,
-  j2sPath: "j2s",
-  color: "0xC0C0C0",
-    disableJ2SLoadMonitor: true,
-    disableInitialConsole: true,
-  addSelectionOptions: false,
-  serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-  use: "HTML5",
-  readyFunction: null,
-  script:scritp_smile
-  
-  //script:scritp_smile
-}
-
-Jmol.getApplet("molecule3D_div", Info, true);
-
-}*/
-
-function drawRadViz(){
-	var dimensions = ['sepalLength', 'sepalWidth', 'petalLength', 'petalWidth'];
-    radVizArea = radvizComponent()
-	     .config({
-            el: document.querySelector('.container'),
-            colorAccessor: function(d){ return d['species']; },
-            dimensions: dimensions,
-            size: 500,
-            margin: 100,
-            useRepulsion: true,
-            drawLinks: true,
-            tooltipFormatter: function(d){
-                return '<h1>' + d.species 
-                  + '</h1>' +dimensions.map(function(dB){
-                  return dB + ': ' + d[dB]; }).join('<br />');
-            }
-        });
-
-        d3.json('https://rawgit.com/biovisualize/radviz/master/data/iris.json', function(error, data){
-        console.log(data);
-        radVizArea.render(data);
-		
-		
-
-		 });
-}
 
 //We will build a basic function to handle window resizing.
 function resize() {
