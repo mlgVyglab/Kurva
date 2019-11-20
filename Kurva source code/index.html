@@ -7,14 +7,35 @@
     <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> 	
     <script src="https://rawgit.com/biovisualize/radviz/master/radviz-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
     <link href="./public/main.css" rel="stylesheet">
     <script type="text/javascript" src="./public/palko.js"></script>
+    <script type="text/javascript" src="./public/ui.js"></script>
     <script type="text/javascript" src="./public/TemplateData/UnityProgress.js"></script>
     <script type="text/javascript" src="./public/Build/UnityLoader.js"></script>
   </head>
 
 
   <body>
+
+    <div class="container-fluid">
+      <!-- Form for SMILES formula input -->
+      <form class="form-inline" method="post" action="/api/smiles_to_sdf" id="smiles_form" style="">
+        <div class="input-group col-md-10 text-white">
+          <input type="text" class="form-control" name="smiles" id="smiles_input"
+            placeholder="Copy your SMILES formulas here:">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit SMILES</button>
+      </form>
+    </div>
+
+    <div id="plot_div3" class="container"> 
+      <label class='checkbox'>
+        <input type="checkBox" name="checkbox" >Ver Bioactividad</input>
+      </label> 
+    </div>
+
     <div>
       <input type="text" id="myText" >
       <button onclick="rotate()">Load sdf</button>
@@ -37,14 +58,5 @@
       <div class="col-sm-4" id="radViz_div"></div>      
       </div>
     </div>
- 
-  
-  <div id="plot_div3" class="container">   <label class='checkbox'><input type="checkBox" name="checkbox" >Ver Bioactividad</label> </div>
-
-  
-
-  
-
-
   
   </body>
