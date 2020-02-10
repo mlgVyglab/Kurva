@@ -171,6 +171,7 @@ Main Plot
 function drawPlot(){
 
   resetPlot();
+  // drawHex();
 }
 
 /*----------------------
@@ -664,7 +665,7 @@ function cargarImagen(molecula){
 
 
 function drawMolecule3D(){
-  gameInstance = UnityLoader.instantiate("molecule3D_div", "Build/WebGL.json", {onProgress: UnityProgress});
+  // gameInstance = UnityLoader.instantiate("molecule3D_div", "Build/WebGL.json", {onProgress: UnityProgress});
 
 }
 

@@ -9,11 +9,13 @@
     <script src="https://rawgit.com/biovisualize/radviz/master/radviz-min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
     <link href="./public/main.css" rel="stylesheet">
+    <script type="text/javascript" src="./public/hex.js"></script>
     <script type="text/javascript" src="./public/molecularview.js"></script>
     <script type="text/javascript" src="./public/ui.js"></script>
     <script type="text/javascript" src="./public/TemplateData/UnityProgress.js"></script>
-    <script type="text/javascript" src="./public/Build/UnityLoader.js"></script>
+    <!-- <script type="text/javascript" src="./public/Build/UnityLoader.js"></script> -->
   </head>
 
 
@@ -40,6 +42,7 @@
       <input type="text" id="myText" >
       <button onclick="rotate()">Load sdf</button>
     </div>
+
     <div class="container-fluid" id="title_div"></div>
     <div class="container-fluid">
       <div class="row">
@@ -54,6 +57,13 @@
       <div class="col-sm-3" id="molecule3D_div"></div>
       </div>
     <div class="row">
+
+      <!-- div for hex view experiments -->
+      <div class="col-sm-12" id="hex_div">
+        <button onclick="drawHex()">FUCK!</button>
+      </div>
+
+
       <div class="col-sm-12" id="details_div"></div>  
       </div>
     </div>
