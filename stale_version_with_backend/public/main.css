@@ -1,0 +1,222 @@
+
+.map { 
+	/*float: left; */
+	/*max-width: 50%; */
+	/*max-height: 95vh; */
+	/*height: 95vh;*/
+} 
+
+body{
+	background:#b8b8b8;
+	/*margin-top:50px;*/
+	font: 15px "Trebuchet MS";
+	color:#c0c0c0;
+
+}
+
+
+#details_div{
+    /*border:1px solid red;*/
+    overflow-y: scroll;
+}
+#title_div{
+   /* border:1px solid red;  */
+    min-height:0px !important;
+    height: 75%;
+    font-size: calc(3vw + 3vh);
+}
+
+#context_div{
+    height:40vh;
+    /*border:1px solid red; */
+}
+
+#tags_div{
+    font-size: calc(3vw + 3vh);
+ /*   border:1px solid gray;*/
+ }
+#plot_div{
+    /*border:1px solid red;*/
+    
+}
+
+#molecule_div{
+  float: right;
+}
+
+#molecule3D_div{
+  /*border:1px solid red;*/
+   
+}
+
+#radViz_div{
+   /* border: 1px solid red;*/
+    font-size: calc(3vw + 3vh);   
+}
+
+#jmolApplet0_appletinfotablediv{
+	width: 100% !important;
+	height: 100% !important;
+}
+.headline, .subline{
+  display: block;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  fill: white;
+  font-family: 'PT Sans',sans-serif;
+  opacity: 0.5;
+}
+
+.headline{
+  font-size: 50%;
+  font-weight: bold;
+}
+
+.subline{
+  font-size: 50%;
+  font-weight: thin;
+}
+
+.label{
+  font-family: 'PT Sans',sans-serif;
+  opacity: 1;
+  font-size: 30%;
+}
+
+.selected_points {
+  opacity: 1 !important;
+  stroke: black;
+  stroke-width: 1px
+}
+
+
+.th_SMILES{
+  background-color: #c3c3c3;
+  width: 35%;
+  font: 13px sans-serif;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.th_otros{
+  background-color: #c3c3c3;
+  width: 10%;
+  font: 13px sans-serif;
+  vertical-align: middle;
+  text-align: center;
+}
+      
+/*.tr{
+  height: 30;
+}
+*/
+thead.fixedHeader tr {
+  /*position: -webkit-sticky;*/
+  position: sticky;
+  top: 0px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+  /*position: -webkit-sticky;*/
+  position: sticky;
+  top: 0px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+thead.fixedHeader {
+  /*position: -webkit-sticky;*/
+  position: sticky;
+  table-layout: fixed;
+  top: 0px;
+  display: table;
+  border-collapse: collapse;
+  text-align: center;
+  /*overflow-y: scroll;*/
+  width: 100%
+}
+
+.panel {
+    stroke: black;
+    fill: white;
+}
+
+.bg {
+    fill: white;
+}
+
+.link {
+    stroke: silver;
+    stroke-opacity: 0.05
+}
+
+.dot {
+    fill-opacity: 0.5;
+}
+
+.label-node {
+    fill: silver;
+}
+
+.active {
+    stroke: black;
+}
+
+.label {
+    fill: gray;
+    pointer-events: none;
+}
+
+#tooltip {
+    font-size: 12px;
+    margin-top: 22px;
+    background-color: rgba(255, 255, 150, 1.8);
+   // border-radius: 4px;
+}
+
+#tooltip h1 {
+    font-size: 14px;
+    margin: 0;
+}
+
+tbody.scrollContent {
+  display: table;
+  table-layout: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.td_SMILES{
+  width: 35%;
+  text-align: left;
+  font: 11px sans-serif;
+  border-collapse: collapse;
+  overflow-x: hidden;
+  word-wrap:break-word;
+}
+.td_otros{
+  width: 10%;
+  text-align: center;
+  font: 10px sans-serif;
+}
+
+.simple_text{
+  text-align: left;
+  font: 12px sans-serif;
+  color: black;
+}
+
+.checkbox{
+  position: absolute;
+  top: 5px; right: 60px;
+  text-align: left;
+  font: 12px sans-serif;
+  color: black;
+}
